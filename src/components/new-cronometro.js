@@ -13,6 +13,8 @@ class NewCronometro extends Component{
     this.state={
       showNewCronometro:true,
       cronometros:[],
+      title:'',
+      project:''
     }
 
     store.subscribe(()=>{
@@ -115,6 +117,10 @@ class NewCronometro extends Component{
       type: "ADD_CRONOMETRO",
       newCronometro
     })
+    this.setState({ 
+      title: '',
+      project: '' 
+    });
   }
   closeFormCronometro(){
     store.dispatch({
